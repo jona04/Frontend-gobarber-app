@@ -10,6 +10,7 @@ module.exports = {
     SharedArrayBuffer: "readonly",
     __DEV__: true
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -22,6 +23,7 @@ module.exports = {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
     "import/prefer-default-export": "off",
+    'react/jsx-props-no-spreading': 'off',
     "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     "react/jsx-one-expression-per-line": "off",
     "global-require": "off",
@@ -33,11 +35,12 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   },
-  settings: {
-    "import/resolver": {
-      "babel-plugin-root-import": {
-        rootPathSuffix: "src"
-      },
-    },
-  },
+  settings:{
+      "import/resolver":{
+          "babel-plugin-root-import":{
+              rootPathSuffix:"src"
+          }
+      }
+  }
+
 };

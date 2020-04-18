@@ -1,9 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router } from 'react-router-dom';
+
+import './config/ReactotronConfig';
+
+import history from './services/history';
+import Routes from './routes';
+
+import GlobalStyle from './styles/global';
 
 function App() {
-  return (<h1>Ola mundo</h1>);
+    return (
+        <Router history={history}>
+            <Routes />
+            <GlobalStyle />
+        </Router>
+    );
 }
 
 export default App;
